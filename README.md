@@ -1,7 +1,7 @@
 # Crypto Icons for Next.js
 
 Uses the [`cryptocurrency-icons`
-package](https://github.com/spothq/cryptocurrency-icons) package, served from the
+package](https://github.com/spothq/cryptocurrency-icons), served from the
 [JsDelivr CDN](https://www.jsdelivr.com/package/npm/cryptocurrency-icons), to
 render a cryptocurrency icon easily.
 
