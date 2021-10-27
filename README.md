@@ -32,16 +32,14 @@ export default DemoHome;
 
 Renders the following 3 icons:
 
-<div style="display: flex; gap: 2rem; padding: 2rem;">
-  <img width="32" height="32"
+<img width="32" height="32"
   src="https://cdn.jsdelivr.net/npm/cryptocurrency-icons@latest/svg/black/btc.svg"
-  />
+/>
 
-  <img width="32" height="32"
+<img width="32" height="32"
   src="https://cdn.jsdelivr.net/npm/cryptocurrency-icons@latest/svg/black/eth.svg"
-  />
+/>
 
-  <img width="32" height="32"
+<img width="32" height="32"
   src="https://cdn.jsdelivr.net/npm/cryptocurrency-icons@latest/svg/black/sol.svg"
-  />
-</div>
+/>
