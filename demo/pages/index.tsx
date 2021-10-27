@@ -1,4 +1,5 @@
-import { CryptoIcon } from "../../src";
+import { CryptoIcon } from "../..";
+console.log(<CryptoIcon name="btc" />);
 
 const DemoHome = () => {
   return (

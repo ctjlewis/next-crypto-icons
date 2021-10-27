@@ -1,5 +1,11 @@
 import { FC } from 'react';
-import Image from 'next/image';
+import ImageModule from 'next/image';
+
+/**
+ * Shipping CJS is terrible and you shouldn't do it.
+ */
+// @ts-ignore
+const { default: Image } = ImageModule;
 
 interface CryptoIconProps {
   name: string;

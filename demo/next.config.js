@@ -5,7 +5,7 @@ module.exports = {
   reactStrictMode: true,
   experimental: {
     esmExternals: true,
-    externalDir: true,
+    // externalDir: true,
   },
   webpack: (config = {}) => {
     // config.experiments = { topLevelAwait: true };
