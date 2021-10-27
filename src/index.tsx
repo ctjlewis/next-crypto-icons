@@ -1,1 +1,1 @@
-export * from './CryptoIcon'
+export * from './CryptoIcon';
