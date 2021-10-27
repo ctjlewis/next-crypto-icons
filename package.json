@@ -3,7 +3,7 @@
   "homepage": "https://github.com/ctjlewis/next-crypto-icons",
   "author": "C. Lewis <ctj.lewis@icloud.com>",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "engines": {
     "node": ">=14"
@@ -53,9 +53,6 @@
     "yarn-deduplicate": "^3.1.0"
   },
   "dependencies": {
-    "cryptocurrency-icons": "^0.18.0",
-    "cypress": "^8.7.0",
-    "next": "^12.0.0",
-    "start-server-and-test": "^1.14.0"
+    "cryptocurrency-icons": "^0.18.0"
   }
 }
