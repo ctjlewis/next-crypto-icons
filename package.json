@@ -3,7 +3,7 @@
   "homepage": "https://github.com/ctjlewis/next-crypto-icons",
   "author": "C. Lewis <ctj.lewis@icloud.com>",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "license": "MIT",
   "engines": {
     "node": ">=14"
