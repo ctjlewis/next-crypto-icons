@@ -11,10 +11,10 @@
   "scripts": {
     "export": "tsmodule build -b",
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && yarn export",
     "start": "next start",
     "lint": "next lint --fix",
-    "pretest": "tsmodule build --runtime-only",
+    "pretest": "yarn build",
     "test": "ava",
     "prepublishOnly": "yarn export && yarn test"
   },
