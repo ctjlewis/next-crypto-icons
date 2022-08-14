@@ -9,24 +9,22 @@
     "node": ">=14"
   },
   "scripts": {
-    "preboot": "yarn clean",
-    "boot": "tsc && rollup -c --silent",
-    "bootstrap": "yarn boot && yarn build",
-    "dev": "tszip dev",
-    "build": "tszip build",
-    "start": "cd demo && yarn dev",
-    "lint": "tszip lint",
-    "prepare": "tszip build",
-    "cypress": "cypress open",
-    "cypress:headless": "cypress run",
-    "e2e": "start-server-and-test start http://localhost:3000 cypress",
-    "e2e:headless": "start-server-and-test start http://localhost:3000 cypress:headless"
+    "export": "tsmodule build -b",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint --fix",
+    "pretest": "tsmodule build --runtime-only",
+    "test": "ava",
+    "prepublishOnly": "yarn export && yarn test"
   },
   "module": "./dist/index.js",
   "exports": {
     "./package.json": "./package.json",
     ".": "./dist/index.js",
-    "./*": "./dist/*/index.js"
+    "./*": "./dist/components/*/index.js",
+    "./styles": "./dist/bundle.css",
+    "./styles/*": "./dist/components/*/index.css"
   },
   "typings": "dist/index.d.ts",
   "files": [
@@ -42,17 +40,49 @@
     "trailingComma": "all"
   },
   "devDependencies": {
-    "@tszip/tszip": "^1.14.1",
-    "@types/react": "^17.0.33",
-    "@types/react-dom": "^17.0.10",
+    "@tsmodule/react": "^12.0.0",
+    "@tsmodule/tsmodule": "^40.0.17",
+    "@types/node": "^18.7.3",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
+    "autoprefixer": "^10.4.8",
+    "ava": "^4.3.1",
+    "cssnano": "^5.1.13",
+    "eslint": "^8.22.0",
+    "eslint-config-next": "^12.2.5",
     "husky": "^7.0.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "next": "^12.2.5",
+    "postcss": "^8.4.16",
+    "postcss-import": "^14.1.0",
+    "tailwindcss": "^3.1.8",
     "tslib": "^2.3.1",
-    "typescript": "^4.4.4",
+    "typescript": "^4.7.4",
     "yarn-deduplicate": "^3.1.0"
   },
   "dependencies": {
-    "cryptocurrency-icons": "^0.18.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "platform": "browser",
+  "types": "dist/index.d.ts",
+  "ava": {
+    "timeout": "10m",
+    "files": [
+      "test/**/*.test.ts"
+    ],
+    "extensions": {
+      "ts": "module"
+    },
+    "nodeArguments": [
+      "--no-warnings",
+      "--loader=@tsmodule/tsmodule/loader"
+    ]
+  },
+  "style": "dist/bundle.css",
+  "resolutions": {
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11"
   }
 }

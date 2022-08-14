@@ -6,3 +6,5 @@
 node_modules
 docs-build
 dist
+
+.next
