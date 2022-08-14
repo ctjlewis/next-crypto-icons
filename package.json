@@ -9,14 +9,13 @@
     "node": ">=14"
   },
   "scripts": {
-    "export": "tsmodule build",
-    "dev": "next dev",
-    "build": "next build && yarn export",
-    "start": "next start",
     "lint": "next lint --fix",
-    "pretest": "yarn build",
-    "test": "ava",
-    "prepublishOnly": "yarn export && yarn test"
+    "dev": "next dev",
+    "start": "next start",
+    "export": "tsmodule build",
+    "build": "next build && yarn export",
+    "test": "yarn build && ava",
+    "prepublishOnly": "yarn test"
   },
   "module": "./dist/index.js",
   "exports": {
