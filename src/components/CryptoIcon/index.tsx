@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import ImageModule from 'next/image';
+import ImageModule from 'next/image.js';
 
 /**
  * Shipping CJS is terrible and you shouldn't do it.
