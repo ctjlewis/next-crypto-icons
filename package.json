@@ -9,7 +9,7 @@
     "node": ">=14"
   },
   "scripts": {
-    "export": "tsmodule build -b",
+    "export": "tsmodule build",
     "dev": "next dev",
     "build": "next build && yarn export",
     "start": "next start",
